@@ -5,6 +5,7 @@
  </p>
 </div>
 
+![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/SaaS-Diagram.png)
 
 ## ▌ Table of Contents
 
@@ -61,10 +62,14 @@ The core architecture of this project was designed to consolidate fragmented dat
 * **Data Warehouse**
 
   * *Amazon S3*: Served as a scalable data lake to store both raw and processed data.
+  * ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dataset_diagram.png)
 
 * **Data Processing and Transformation (ETL)**
 
   * *AWS Glue*: Performed ETL (Extract, Transform, Load) operations to transform raw data in S3 into analysis-ready tables.
+    
+    ###### *A section of the pipeline*
+  * ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
 
 * **Data Analysis**
 
@@ -204,6 +209,6 @@ These improvements will significantly increase mobile platform conversion rates.
 
 ## Dashboard Snapshot  
 
-![image]()
+![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
 
 ## Gelecek Adımlar
