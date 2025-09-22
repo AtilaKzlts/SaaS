@@ -24,12 +24,46 @@
 
 This project presents an end-to-end solution that combines data collection (ETL) and analysis (BI) processes to address a core business problem. The main objective was to identify the underlying reasons for low conversion rates in a SaaS company’s mobile application. To achieve this, I consolidated fragmented data from multiple sources (GA4, CRM, ADS) into Amazon S3 using Airbyte, making it ready for analysis. The infrastructure I built not only solved the immediate problem but also established a continuous data pipeline, providing a solid foundation for future analyses.
 
+---
 
 ## ▌ Executive Summary
 
-XXXXXXXX
-XXXXXXXX
-XXXXXXXX
+Mobile conversion rates are underperforming, with **48% of users abandoning the app within the first 2 minutes** due to technical and UX differences between iOS and Android. Key findings:
+
+* **Technical Issues:**
+
+  * Android users generate **2x more support tickets** than iOS users.
+  * iOS Chrome signup rate is only **6%**, causing significant early churn.
+
+* **Financial Impact:**
+
+  * **Basic plan churn is 24%**, representing \~\$45,000 annual revenue loss.
+  * Resolving technical issues could recover up to **50% of this segment’s revenue**.
+
+* **Channel Insights:**
+
+  * Referral channel churn is **34%**, while direct traffic is healthiest at **26%**.
+
+**Root Causes:**
+
+1. Technical debt between iOS and Android.
+2. UX issues in complex features (e.g., project creation).
+3. Ineffective mobile onboarding.
+
+**Recommended Actions:**
+
+* **Immediate (this month):** Fix iOS Chrome compatibility; redesign mobile onboarding.
+* **Mid-term (3 months):** Strengthen Android app QA; develop mobile-friendly project creation feature.
+
+**Targets:**
+
+* Increase iOS Chrome signup from **6% → 15%**.
+* Reduce first-impression churn from **48% → 25%**.
+
+**Outcome:**
+Implementing these actions can drive measurable revenue growth and significantly improve mobile conversion within 6 months.
+
+----
 
 ## ▌ Business Problems
 
@@ -50,6 +84,7 @@ The primary goal of this project was to provide data-driven solutions to the fol
 **Focus for Resolution**:
 The solution required unifying fragmented data sources and identifying potential bottlenecks within the conversion funnel.
 
+---
 
 ## ▌ Technologies and Architecture
 
@@ -79,6 +114,7 @@ The core architecture of this project was designed to consolidate fragmented dat
 
   * *QuickSight*: Used to visualize analysis results and create interactive dashboards.
 
+----
 
 ## ▌ Analysis & Key Findings
 
@@ -155,7 +191,9 @@ The core architecture of this project was designed to consolidate fragmented dat
      * Project creation: 27 churn users
      * Notifications: 26 churn users
      * Task management: 26 churn users
-       
+
+---
+
 ## ▌ Solution and Recommendations (Action Plan)
 
 
@@ -211,4 +249,4 @@ These improvements will significantly increase mobile platform conversion rates.
 
 ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
 
-## Gelecek Adımlar
+## Next Steps
