@@ -27,7 +27,7 @@ This project presents an end-to-end solution that combines data collection (ETL)
 ---
 
 ## ▌ Executive Summary
-##### [Click for visually supported presentation > ]()
+##### [Click for Detailed PDF > ]()
 
 Mobile conversion rates are underperforming, with **48% of users abandoning the app within the first 2 minutes** due to technical and UX differences between iOS and Android. Key findings:
 
