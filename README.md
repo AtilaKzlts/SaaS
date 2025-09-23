@@ -103,9 +103,23 @@ The core architecture of this project was designed to consolidate fragmented dat
 * **Data Processing and Transformation (ETL)**
 
   * *AWS Glue*: Performed ETL (Extract, Transform, Load) operations to transform raw data in S3 into analysis-ready tables.
+
+| Table Name                  | Partition Key        | Rationale                                                                                  |
+|-----------------------------|----------------------|-------------------------------------------------------------------------------------------|
+| ads_campaign_performance.csv | date                 | The most suitable choice for daily or monthly performance analyses. Greatly accelerates time-based queries. |
+| ads_campaigns.csv           | created_date         | Supports historical queries and campaign lifecycle analyses based on creation date. |
+| channel_performance.csv     | channel              | Contains aggregated channel-level data; ensures efficient queries when focusing on a specific channel’s performance. |
+| conversion_funnel.csv       | platform             | Enables comparison of conversion funnel steps across different platforms (Web, Mobile, Tablet). |
+| crm_companies.csv           | country              | Facilitates geographic analyses (e.g., identifying which countries bring in more companies). If time-based analysis is required, created_date can also be used. |
+| crm_subscriptions.csv       | start_date           | Enables churn and growth reporting by analyzing subscriptions based on their start date. |
+| crm_support_tickets.csv     | created_date         | Allows time-based analysis of support requests (e.g., number of tickets opened per month). |
+| ga4_events.csv              | event_date           | Due to the large data volume, daily event-based partitioning is mandatory for query performance. |
+| general_performance.csv     | month                | Contains monthly performance data; the best choice for monthly and quarterly reporting. |
+| users.csv                   | created_date         | Facilitates analysis of user sign-ups within specific time ranges, as user data accumulates over time. |
+
     
-    ###### *A section of the pipeline*
-  * ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
+###### *A section of the pipeline*
+* ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
 
 * **Data Analysis**
 
