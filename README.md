@@ -111,6 +111,44 @@ The core architecture of this project was designed to consolidate fragmented dat
 
   * *Amazon Athena*: Enabled direct analysis of data stored in S3 using SQL queries.
 
+###### *A query example*
+
+ ```sql
+-- Page churn rates 
+WITH page_totals AS (
+    SELECT 
+        regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1) AS page_location,
+        COUNT(DISTINCT ge.user_id) as total_visitors
+    FROM "orbit_analytics"."ga4_events" ge
+    WHERE ge.device_category = 'Mobile'
+    AND ge.event_params LIKE '%page_location%'
+    GROUP BY regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1)
+),
+churned_pages AS (
+    SELECT
+        regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1) AS page_location,
+        COUNT(DISTINCT ge.user_id) AS churned_user_count
+    FROM "orbit_analytics"."ga4_events" ge
+    JOIN "orbit_analytics"."users" u ON u.user_id = ge.user_id
+    WHERE u.is_churned = true
+    AND ge.device_category = 'Mobile'
+    AND ge.event_params LIKE '%page_location%'
+    GROUP BY regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1)
+)
+SELECT
+    cp.page_location,
+    cp.churned_user_count,
+    pt.total_visitors,
+    ROUND(
+        CAST(cp.churned_user_count AS DOUBLE) / CAST(pt.total_visitors AS DOUBLE) * 100, 
+        2
+    ) AS page_churn_rate_percent
+FROM churned_pages cp
+JOIN page_totals pt ON cp.page_location = pt.page_location
+ORDER BY page_churn_rate_percent DESC;
+```
+
+
 * **Business Intelligence (Visualization)**
 
   * *QuickSight*: Used to visualize analysis results and create interactive dashboards.
