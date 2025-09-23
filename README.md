@@ -303,3 +303,14 @@ These improvements will significantly increase mobile platform conversion rates.
 ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
 
 ## Next Steps
+
+### Hypotheses
+
+1. iOS users may show higher conversion rates as they are less likely to experience technical issues.  
+2. The Android funnel may face significant drop-offs at the billing stage.  
+3. Technical issues in the early signup stages may lead to user churn.  
+
+
+These points will serve as initial hypotheses for deeper analysis.  
+In the upcoming stages, we will validate or reject them using funnel analysis, segmentation, and issue-tracking data.  
+The goal is to transform these assumptions into testable hypotheses and derive actionable insights.
