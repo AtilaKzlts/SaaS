@@ -27,6 +27,7 @@ This project presents an end-to-end solution that combines data collection (ETL)
 ---
 
 ## ▌ Executive Summary
+##### [Click for Detailed PDF > ]()
 
 Mobile conversion rates are underperforming, with **48% of users abandoning the app within the first 2 minutes** due to technical and UX differences between iOS and Android. Key findings:
 
@@ -102,13 +103,65 @@ The core architecture of this project was designed to consolidate fragmented dat
 * **Data Processing and Transformation (ETL)**
 
   * *AWS Glue*: Performed ETL (Extract, Transform, Load) operations to transform raw data in S3 into analysis-ready tables.
+
+| Table Name                  | Partition Key |
+|-----------------------------|---------------|
+| ads_campaign_performance | date          |
+| ads_campaigns          | created_date  |
+| channel_performance    | channel       |
+| conversion_funnel      | platform      |
+| crm_companies          | country       |
+| crm_subscriptions      | start_date    |
+| crm_support_tickets| created_date  |
+| ga4_events              | event_date    |
+| general_performance     | month         |
+| users                   | created_date  |
+
     
-    ###### *A section of the pipeline*
-  * ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
+###### *A section of the pipeline*
+* ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
 
 * **Data Analysis**
 
   * *Amazon Athena*: Enabled direct analysis of data stored in S3 using SQL queries.
+
+###### *A query example*
+
+ ```sql
+-- Page churn rates 
+WITH page_totals AS (
+    SELECT 
+        regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1) AS page_location,
+        COUNT(DISTINCT ge.user_id) as total_visitors
+    FROM "orbit_analytics"."ga4_events" ge
+    WHERE ge.device_category = 'Mobile'
+    AND ge.event_params LIKE '%page_location%'
+    GROUP BY regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1)
+),
+churned_pages AS (
+    SELECT
+        regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1) AS page_location,
+        COUNT(DISTINCT ge.user_id) AS churned_user_count
+    FROM "orbit_analytics"."ga4_events" ge
+    JOIN "orbit_analytics"."users" u ON u.user_id = ge.user_id
+    WHERE u.is_churned = true
+    AND ge.device_category = 'Mobile'
+    AND ge.event_params LIKE '%page_location%'
+    GROUP BY regexp_extract(ge.event_params, 'page_location":\s*"([^"]+)"', 1)
+)
+SELECT
+    cp.page_location,
+    cp.churned_user_count,
+    pt.total_visitors,
+    ROUND(
+        CAST(cp.churned_user_count AS DOUBLE) / CAST(pt.total_visitors AS DOUBLE) * 100, 
+        2
+    ) AS page_churn_rate_percent
+FROM churned_pages cp
+JOIN page_totals pt ON cp.page_location = pt.page_location
+ORDER BY page_churn_rate_percent DESC;
+```
+
 
 * **Business Intelligence (Visualization)**
 
@@ -250,3 +303,14 @@ These improvements will significantly increase mobile platform conversion rates.
 ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
 
 ## Next Steps
+
+### Hypotheses
+
+1. iOS users may show higher conversion rates as they are less likely to experience technical issues.  
+2. The Android funnel may face significant drop-offs at the billing stage.  
+3. Technical issues in the early signup stages may lead to user churn.  
+
+
+These points will serve as initial hypotheses for deeper analysis.  
+In the upcoming stages, we will validate or reject them using funnel analysis, segmentation, and issue-tracking data.  
+The goal is to transform these assumptions into testable hypotheses and derive actionable insights.
