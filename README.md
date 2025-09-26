@@ -122,9 +122,11 @@ The core architecture of this project was designed to consolidate fragmented dat
 * ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
 
 * **Monitoring & Alerting**
-  * *Amazon CloudWatch*: Monitored ETL job performance and failures with automated alerts.
-  * *Amazon SNS*: Configured notification system for pipeline failures and data quality issues.
-
+  * *Amazon CloudWatch*: Configured automated monitoring for:
+    - ETL job success/failure tracking
+    - S3 data freshness validation (24-hour data arrival monitoring)
+    - AWS cost control alerts for budget management
+  * *Amazon SNS*: Email notification system for pipeline alerts and data quality issues
 
 * **Data Analysis**
 
