@@ -27,7 +27,7 @@ This project presents an end-to-end solution that combines data collection (ETL)
 ---
 
 ## ▌ Executive Summary
-##### [Click for Detailed PDF > ]()
+##### [Click for Detailed PDF > ](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Orbit%20SaaS-Report.pdf)
 
 Mobile conversion rates are underperforming, with **48% of users abandoning the app within the first 2 minutes** due to technical and UX differences between iOS and Android. Key findings:
 
