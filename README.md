@@ -121,6 +121,13 @@ The core architecture of this project was designed to consolidate fragmented dat
 ###### *A section of the pipeline*
 * ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/glue_job_diagram.png)
 
+* **Monitoring & Alerting**
+  * *Amazon CloudWatch*: Configured automated monitoring for:
+    - ETL job success/failure tracking
+    - S3 data freshness validation (24-hour data arrival monitoring)
+    - AWS cost control alerts for budget management
+  * *Amazon SNS*: Email notification system for pipeline alerts and data quality issues
+
 * **Data Analysis**
 
   * *Amazon Athena*: Enabled direct analysis of data stored in S3 using SQL queries.
