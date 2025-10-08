@@ -130,8 +130,7 @@ The core architecture of this project was designed to consolidate fragmented dat
 
 * **Data Analysis**
 
-  * *Amazon Athena*: Enabled direct analysis of data stored in S3 using SQL queries.
-
+  * *Amazon Athena*: Enabled direct analysis of data stored in S3 using SQL queries.  [> Click for Full SQL Script](https://github.com/AtilaKzlts/SaaS/blob/main/assets/SaaSql-Athena.sql)
 ###### *A query example*
 
  ```sql
