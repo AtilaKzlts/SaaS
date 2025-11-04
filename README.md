@@ -196,10 +196,9 @@ ORDER BY page_churn_rate_percent DESC;
 7. **Page and Feature Analysis**
     * /projects (26.97% churn rate) and Project creation (27 churn users) are the most problematic.
 
-
+---
 
 ## ▌ Solution and Recommendations (Action Plan)
-
 
 **Immediate Action Areas**
 
@@ -241,11 +240,11 @@ The current mobile conversion problem is multi-dimensional. Technical infrastruc
 **Expected Outcome**:
 These improvements will significantly increase mobile platform conversion rates.
 
-## Dashboard Snapshot  
+## ▌ Dashboard Snapshot  
 
 ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
 
-## Next Steps
+## ▌ Next Steps
 
 ### Hypotheses
 
