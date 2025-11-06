@@ -1,5 +1,4 @@
 
-
 <div align="center">
   <h1>AWS End-to-End Data Analytics for SaaS
 
@@ -20,7 +19,6 @@
 * Dashboard Snapshot
 * Next Steps
 
----
 
 ## ▌ Introduction
 
@@ -38,7 +36,6 @@ This data flow was automated using Airbyte. The team no longer spends hours on d
 + The Result: The Growth team can now analyze live data, not just the past, allowing for fast, data-driven decisions and instant identification of the real cause of the slowdown.
 This Infrastructure is the Permanent Solution to Ensure the Problem Never Recurs.
 
----
 
 ## ▌ Executive Summary
 ##### [Click for Detailed PDF > ](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Orbit%20SaaS-Report.pdf)
@@ -50,7 +47,6 @@ This Infrastructure is the Permanent Solution to Ensure the Problem Never Recurs
 | **Financial Impact:**<br>- Basic plan churn: **24%** (~$45,000 annual revenue loss).<br>- Fixing technical issues could recover **~50%** of lost revenue. | **Targets:**<br>- Increase iOS Chrome signup **6% → 15%**.<br>- Reduce first-impression churn **48% → 25%**. |
 | **Channel Insights:**<br>- Referral channel churn: **34%**.<br>- Direct traffic churn: **26% (healthiest)**. | **Expected Outcome:**<br>Implementing these actions can:<br>- Drive measurable **revenue recovery**.<br>- Improve **mobile conversion** within **6 months**. |
 
----
 
 ## ▌ Business Problems
 
@@ -71,7 +67,6 @@ The primary goal of this project was to provide data-driven solutions to the fol
 **Focus for Resolution**:
 The solution required unifying fragmented data sources and identifying potential bottlenecks within the conversion funnel.
 
----
 
 ## ▌ Technologies and Architecture
 
@@ -145,7 +140,6 @@ ORDER BY page_churn_rate_percent DESC;
 
   * *QuickSight*: Used to visualize analysis results and create interactive dashboards.
 
-----
 
 ## ▌ Detailed Insights
 | **Analysis & Key Findings** | **Root Causes & Technical Focus** | **Action Plan & Targets** |
@@ -154,7 +148,7 @@ ORDER BY page_churn_rate_percent DESC;
 | **2. Churn Distribution**<br>- Technical issues cause **41%** of total churn.<br>- **48%** of users churn during first impression (session start + first page). | **User Experience Gaps**<br>- Complex project creation process.<br>- Poor mobile UI for traditional industries.<br>- Lack of context-based help or in-app guidance. | **Mid-Term Improvements (1–3 months)**<br>- Optimize project/team management for mobile.<br>- Improve touchscreen UX.<br>- Enhance onboarding flow with contextual hints. |
 | **3. Subscription Type Insights**<br>- Premium (Enterprise) plan: **1.41% churn**, indicating high loyalty.<br>- Basic plan churn: **24%** (~$45K annual loss). | **Sector-Based Weaknesses**<br>- Traditional industries (Manufacturing): **33.88% churn**.<br>- Lower digital maturity leads to UX friction. | **Industry-Specific Strategy**<br>- Offer simplified UI
 
----
+
 ## ▌ Dashboard Snapshot  
 
 ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
