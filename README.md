@@ -142,13 +142,16 @@ ORDER BY page_churn_rate_percent DESC;
 
 
 ## ▌ Detailed Insights
+
+
+![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Mobile%20Funneal.png)
+
 | **Analysis & Key Findings** | **Root Causes & Technical Focus** | **Action Plan & Targets** |
 |------------------------------|-----------------------------------|----------------------------|
 | **1. Technical Infrastructure Issues**<br>- Android users generate **2× more support tickets** than iOS users.<br>- iOS Chrome users face serious signup issues (**6.06%** success rate). | **Primary Root Causes**<br>- Platform inconsistencies between iOS & Android.<br>- UX issues in project creation flow.<br>- Onboarding process fails to retain users.<br>- Technical debt causing fragmented QA. | **Immediate Actions (0–1 month)**<br>- Fix iOS Chrome compatibility & WebKit form handling.<br>- Strengthen Android QA and error monitoring.<br>- Redesign onboarding to reduce 30s churn from **48% → <20%**. |
 | **2. Churn Distribution**<br>- Technical issues cause **41%** of total churn.<br>- **48%** of users churn during first impression (session start + first page). | **User Experience Gaps**<br>- Complex project creation process.<br>- Poor mobile UI for traditional industries.<br>- Lack of context-based help or in-app guidance. | **Mid-Term Improvements (1–3 months)**<br>- Optimize project/team management for mobile.<br>- Improve touchscreen UX.<br>- Enhance onboarding flow with contextual hints. |
 | **3. Subscription Type Insights**<br>- Premium (Enterprise) plan: **1.41% churn**, indicating high loyalty.<br>- Basic plan churn: **24%** (~$45K annual loss). | **Sector-Based Weaknesses**<br>- Traditional industries (Manufacturing): **33.88% churn**.<br>- Lower digital maturity leads to UX friction. | **Industry-Specific Strategy**<br>- Offer simplified UI
 
-![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Mobile%20Funneal.png)
 
 ## ▌ Dashboard Snapshot  
 
