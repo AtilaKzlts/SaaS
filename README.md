@@ -148,6 +148,7 @@ ORDER BY page_churn_rate_percent DESC;
 | **2. Churn Distribution**<br>- Technical issues cause **41%** of total churn.<br>- **48%** of users churn during first impression (session start + first page). | **User Experience Gaps**<br>- Complex project creation process.<br>- Poor mobile UI for traditional industries.<br>- Lack of context-based help or in-app guidance. | **Mid-Term Improvements (1–3 months)**<br>- Optimize project/team management for mobile.<br>- Improve touchscreen UX.<br>- Enhance onboarding flow with contextual hints. |
 | **3. Subscription Type Insights**<br>- Premium (Enterprise) plan: **1.41% churn**, indicating high loyalty.<br>- Basic plan churn: **24%** (~$45K annual loss). | **Sector-Based Weaknesses**<br>- Traditional industries (Manufacturing): **33.88% churn**.<br>- Lower digital maturity leads to UX friction. | **Industry-Specific Strategy**<br>- Offer simplified UI
 
+![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Mobile%20Funneal.png)
 
 ## ▌ Dashboard Snapshot  
 
