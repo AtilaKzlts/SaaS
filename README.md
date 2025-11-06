@@ -1,3 +1,5 @@
+
+
 <div align="center">
   <h1>AWS End-to-End Data Analytics for SaaS
 
@@ -18,7 +20,7 @@
 * Dashboard Snapshot
 * Next Steps
 
-
+---
 
 ## ▌ Introduction
 
@@ -41,42 +43,14 @@ This Infrastructure is the Permanent Solution to Ensure the Problem Never Recurs
 ## ▌ Executive Summary
 ##### [Click for Detailed PDF > ](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Orbit%20SaaS-Report.pdf)
 
-Mobile conversion rates are underperforming, with **48% of users abandoning the app within the first 2 minutes** due to technical and UX differences between iOS and Android. Key findings:
+| **Mobile Performance Insights** | **Root Causes & Actions** |
+|---------------------------------|----------------------------|
+| **Key Issue:**<br>48% of users abandon the app within the first 2 minutes due to **technical and UX differences** between iOS and Android. | **Root Causes:**<br>- Technical debt between iOS and Android.<br>- Poor UX in **project creation flow**.<br>- Ineffective **mobile onboarding**. |
+| **Technical Issues:**<br>- Android users create **2x more support tickets** than iOS users.<br>- iOS Chrome signup rate only **6%**, driving early churn. | **Recommended Actions:**<br>**Immediate (this month):**<br>- Fix iOS Chrome compatibility.<br>- Redesign mobile onboarding.<br>**Mid-term (3 months):**<br>- Strengthen Android QA.<br>- Develop mobile-friendly project creation. |
+| **Financial Impact:**<br>- Basic plan churn: **24%** (~$45,000 annual revenue loss).<br>- Fixing technical issues could recover **~50%** of lost revenue. | **Targets:**<br>- Increase iOS Chrome signup **6% → 15%**.<br>- Reduce first-impression churn **48% → 25%**. |
+| **Channel Insights:**<br>- Referral channel churn: **34%**.<br>- Direct traffic churn: **26% (healthiest)**. | **Expected Outcome:**<br>Implementing these actions can:<br>- Drive measurable **revenue recovery**.<br>- Improve **mobile conversion** within **6 months**. |
 
-* **Technical Issues:**
-
-  * Android users generate **2x more support tickets** than iOS users.
-  * iOS Chrome signup rate is only **6%**, causing significant early churn.
-
-* **Financial Impact:**
-
-  * **Basic plan churn is 24%**, representing \~\$45,000 annual revenue loss.
-  * Resolving technical issues could recover up to **50% of this segment’s revenue**.
-
-* **Channel Insights:**
-
-  * Referral channel churn is **34%**, while direct traffic is healthiest at **26%**.
-
-**Root Causes:**
-
-1. Technical debt between iOS and Android.
-2. UX issues in complex features (e.g., project creation).
-3. Ineffective mobile onboarding.
-
-**Recommended Actions:**
-
-* **Immediate (this month):** Fix iOS Chrome compatibility; redesign mobile onboarding.
-* **Mid-term (3 months):** Strengthen Android app QA; develop mobile-friendly project creation feature.
-
-**Targets:**
-
-* Increase iOS Chrome signup from **6% → 15%**.
-* Reduce first-impression churn from **48% → 25%**.
-
-**Outcome:**
-Implementing these actions can drive measurable revenue growth and significantly improve mobile conversion within 6 months.
-
-----
+---
 
 ## ▌ Business Problems
 
@@ -173,73 +147,14 @@ ORDER BY page_churn_rate_percent DESC;
 
 ----
 
-## ▌ Analysis & Key Findings
-
-
-1. **Technical Infrastructure Issues**
-    * Android users generated twice as many support tickets as iOS users.
-    * iOS Chrome users experience severe signup difficulties due to compatibility issues (6.06% signup rate).
-      
-2. **Root Causes of Customer Churn**
-    * Technical issues: 66 churns (41% share) – the largest factor.
-    * 48% of churn occurs during the first impression stage (session start + page view).
-      
-3. **Subscription Type Analysis**
-    * Premium plan users show stronger retention (Enterprise: 1.41% churn rate) on mobile.
-
-5. **Sector Performance Differences**
-    * Traditional industries experience higher churn on mobile (Manufacturing: 33.88% churn rate).
-
-6. **Marketing Channel Analysis**
-    * Referral (34.35% churn rate) and Email (34.02% churn rate) channels show unexpectedly high churn.
-
-7. **Page and Feature Analysis**
-    * /projects (26.97% churn rate) and Project creation (27 churn users) are the most problematic.
+## ▌ Detailed Insights
+| **Analysis & Key Findings** | **Root Causes & Technical Focus** | **Action Plan & Targets** |
+|------------------------------|-----------------------------------|----------------------------|
+| **1. Technical Infrastructure Issues**<br>- Android users generate **2× more support tickets** than iOS users.<br>- iOS Chrome users face serious signup issues (**6.06%** success rate). | **Primary Root Causes**<br>- Platform inconsistencies between iOS & Android.<br>- UX issues in project creation flow.<br>- Onboarding process fails to retain users.<br>- Technical debt causing fragmented QA. | **Immediate Actions (0–1 month)**<br>- Fix iOS Chrome compatibility & WebKit form handling.<br>- Strengthen Android QA and error monitoring.<br>- Redesign onboarding to reduce 30s churn from **48% → <20%**. |
+| **2. Churn Distribution**<br>- Technical issues cause **41%** of total churn.<br>- **48%** of users churn during first impression (session start + first page). | **User Experience Gaps**<br>- Complex project creation process.<br>- Poor mobile UI for traditional industries.<br>- Lack of context-based help or in-app guidance. | **Mid-Term Improvements (1–3 months)**<br>- Optimize project/team management for mobile.<br>- Improve touchscreen UX.<br>- Enhance onboarding flow with contextual hints. |
+| **3. Subscription Type Insights**<br>- Premium (Enterprise) plan: **1.41% churn**, indicating high loyalty.<br>- Basic plan churn: **24%** (~$45K annual loss). | **Sector-Based Weaknesses**<br>- Traditional industries (Manufacturing): **33.88% churn**.<br>- Lower digital maturity leads to UX friction. | **Industry-Specific Strategy**<br>- Offer simplified UI
 
 ---
-
-## ▌ Solution and Recommendations (Action Plan)
-
-**Immediate Action Areas**
-
-1. **iOS Chrome Compatibility Issue**
-   * Severe compatibility and form handling issues must be resolved.
-   * WebKit restrictions should be addressed.
-
-2. **Android Technical Stability**
-   * High volume of Android support tickets must be reduced.
-   * Strengthen Android-specific QA processes.
-
-3. **First Impression Experience**
-   * Redesign the mobile onboarding process.
-   * Reduce first 30-second churn from 48% to below 20%.
-
-**Mid-Term Improvements**
-
-1. **Project and Team Management Mobile Optimization**
-   * Develop mobile-friendly versions of complex features.
-   * Improve touchscreen interaction.
-
-2. **Industry-Specific Solutions**
-   * Provide desktop-like mobile interfaces for traditional industries.
-   * Apply technology sector best practices to other industries.
-
-3. **Marketing Channel Optimization**
-   * Improve referral program quality control.
-   * Segment and clean email lists.
-
-
-The current mobile conversion problem is multi-dimensional. Technical infrastructure issues, user experience gaps, and marketing channel quality challenges collectively drive poor performance.
-
-**Priority Targets**:
-* Increase iOS Chrome signup rate from 6% to 15%.
-* Reduce first impression churn from 48% to 25%.
-* Cut Android support tickets by 50%.
-* Reduce Basic plan churn rate from 24% to 15%.
-
-**Expected Outcome**:
-These improvements will significantly increase mobile platform conversion rates.
-
 ## ▌ Dashboard Snapshot  
 
 ![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Dashboard_SS.png)
