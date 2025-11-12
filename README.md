@@ -22,19 +22,26 @@
 
 ## ▌ Introduction
 
-The Problem: Growth Pains and Critical Revenue Loss
-Following last year’s rapid growth, Orbit has slowed down over the last 6 months.
-The Most Critical Issue: Mobile app conversion rates are DISASTROUSLY low compared to the website.
+**The Problem: Growth Pains and Critical Revenue Loss**
+Following last year’s rapid growth, Orbit has slowed down over the last six months.
+The most critical issue: mobile app conversion rates are disastrously low compared to the website.
 
-The Solution: A Continuous Growth Infrastructure, Not a One-Time Answer
-Instead of providing a one-off answer to the CEO’s question **(“Why did we slow down?”),** I built a system that allows us to **continuously monitor** the problem and track the root cause at all times.
-Project Goal: Uniting Data Silos for Continuity and Efficiency Savings.
-+ Bridging the Data Silos:
-Dispersed data (GA4, CRM/PG, ADS) was consolidated into a single central repository (Amazon S3 Data Lake).
-+ Saving Manpower Through Automation:
-This data flow was automated using Airbyte. The team no longer spends hours on data gathering; their time is dedicated to analysis and action.
-+ The Result: The Growth team can now analyze live data, not just the past, allowing for fast, data-driven decisions and instant identification of the real cause of the slowdown.
-This Infrastructure is the Permanent Solution to Ensure the Problem Never Recurs.
+**The Solution: A Continuous Growth Infrastructure, Not a One-Time Answer**
+Instead of providing a one-off answer to the CEO’s question (“Why did we slow down?”), I built a system that allows us to continuously monitor the problem and track the root cause at all times.
+
+**Project Goal: Uniting Data Silos for Continuity and Efficiency Savings**
+
+* **Bridging the Data Silos:**
+  Dispersed data (GA4, CRM/PG, ADS) was consolidated into a single central repository (Amazon S3 Data Lake).
+
+* **Saving Manpower Through Automation:**
+  This data flow was automated using Airbyte. The team no longer spends hours on data gathering; their time is dedicated to analysis and action.
+
+* **The Result:**
+  The Growth team can now analyze live data, not just the past, allowing for fast, data-driven decisions and instant identification of the real cause of the slowdown.
+
+This infrastructure is the permanent solution to ensure the problem never recurs.
+
 
 
 ## ▌ Executive Summary
