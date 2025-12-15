@@ -22,30 +22,41 @@
 
 ## ▌ Introduction
 
-The Problem: Growth Pains and Critical Revenue Loss
-Following last year’s rapid growth, Orbit has slowed down over the last 6 months.
-The Most Critical Issue: Mobile app conversion rates are DISASTROUSLY low compared to the website.
+**The Problem: Growth Pains and Critical Revenue Loss**
+Following last year’s rapid growth, Orbit has slowed down over the last six months.
+The most critical issue: mobile app conversion rates are disastrously low compared to the website.
 
-The Solution: A Continuous Growth Infrastructure, Not a One-Time Answer
-Instead of providing a one-off answer to the CEO’s question **(“Why did we slow down?”),** I built a system that allows us to **continuously monitor** the problem and track the root cause at all times.
-Project Goal: Uniting Data Silos for Continuity and Efficiency Savings.
-+ Bridging the Data Silos:
-Dispersed data (GA4, CRM/PG, ADS) was consolidated into a single central repository (Amazon S3 Data Lake).
-+ Saving Manpower Through Automation:
-This data flow was automated using Airbyte. The team no longer spends hours on data gathering; their time is dedicated to analysis and action.
-+ The Result: The Growth team can now analyze live data, not just the past, allowing for fast, data-driven decisions and instant identification of the real cause of the slowdown.
-This Infrastructure is the Permanent Solution to Ensure the Problem Never Recurs.
+**The Solution: A Continuous Growth Infrastructure, Not a One-Time Answer**
+Instead of providing a one-off answer to the CEO’s question (“Why did we slow down?”), I built a system that allows us to continuously monitor the problem and track the root cause at all times.
+
+**Project Goal: Uniting Data Silos for Continuity and Efficiency Savings**
+
+* **Bridging the Data Silos:**
+  Dispersed data (GA4, CRM/PG, ADS) was consolidated into a single central repository (Amazon S3 Data Lake).
+
+* **Saving Manpower Through Automation:**
+  This data flow was automated using Airbyte. The team no longer spends hours on data gathering; their time is dedicated to analysis and action.
+
+* **The Result:**
+  The Growth team can now analyze live data, not just the past, allowing for fast, data-driven decisions and instant identification of the real cause of the slowdown.
+
+This infrastructure is the permanent solution to ensure the problem never recurs.
+
 
 
 ## ▌ Executive Summary
 ##### [Click for Detailed PDF > ](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Orbit%20SaaS-Report.pdf)
 
-| **Mobile Performance Insights** | **Root Causes & Actions** |
-|---------------------------------|----------------------------|
-| **Key Issue:**<br>48% of users abandon the app within the first 2 minutes due to **technical and UX differences** between iOS and Android. | **Root Causes:**<br>- Technical debt between iOS and Android.<br>- Poor UX in **project creation flow**.<br>- Ineffective **mobile onboarding**. |
-| **Technical Issues:**<br>- Android users create **2x more support tickets** than iOS users.<br>- iOS Chrome signup rate only **6%**, driving early churn. | **Recommended Actions:**<br>**Immediate (this month):**<br>- Fix iOS Chrome compatibility.<br>- Redesign mobile onboarding.<br>**Mid-term (3 months):**<br>- Strengthen Android QA.<br>- Develop mobile-friendly project creation. |
-| **Financial Impact:**<br>- Basic plan churn: **24%** (~$45,000 annual revenue loss).<br>- Fixing technical issues could recover **~50%** of lost revenue. | **Targets:**<br>- Increase iOS Chrome signup **6% → 15%**.<br>- Reduce first-impression churn **48% → 25%**. |
-| **Channel Insights:**<br>- Referral channel churn: **34%**.<br>- Direct traffic churn: **26% (healthiest)**. | **Expected Outcome:**<br>Implementing these actions can:<br>- Drive measurable **revenue recovery**.<br>- Improve **mobile conversion** within **6 months**. |
+| **Stage / Area**                | **Insight (Key Finding)**                                                                                                                                                                              | **Recommended Action**                                                                                                                                           |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Onboarding Experience**       | 48% of users leave the app within the first 2 minutes — mainly due to UX and technical inconsistencies between iOS and Android. This creates weak first impressions and lost conversion opportunities. | Redesign the mobile onboarding journey to deliver immediate value and consistent cross-platform experience. Highlight core product benefits earlier in the flow. |
+| **Technical Stability**         | Android users generate **2× more support tickets** than iOS users, reflecting unstable builds and higher maintenance overhead.                                                                         | Strengthen QA processes on Android and unify technical architecture to reduce issue frequency and support costs.                                                 |
+| **Sign-up Funnel**              | iOS Chrome users show a **6% signup rate**, indicating significant friction at the registration step.                                                                                                  | Fix Chrome compatibility issues and simplify the signup form to improve conversion. Target signup increase to **15%**.                                           |
+| **Customer Retention**          | The basic plan shows **24% churn**, leading to an estimated **$45,000 annual revenue loss**. Around 50% of this loss is linked to solvable technical issues.                                           | Prioritize technical fixes to recover half of the lost revenue. Introduce retention incentives (e.g., loyalty credits or guided onboarding).                     |
+| **Referral vs Direct Channels** | Referral channel churn is **34%**, higher than direct traffic (**26%**). Referred users seem less engaged after signup.                                                                                | Audit referral traffic quality and redesign referral incentives to attract higher-intent users. Continue strengthening direct acquisition channels.              |
+| **Business Outcome Projection** | Resolving onboarding and technical pain points is expected to recover measurable revenue within 3–6 months and increase mobile conversion rates significantly.                                         | Implement the proposed roadmap with bi-weekly impact tracking to monitor churn and signup improvements.                                                          |
+                                                                                                                                                                            
+
 
 
 ## ▌ Business Problems
@@ -142,13 +153,16 @@ ORDER BY page_churn_rate_percent DESC;
 
 
 ## ▌ Detailed Insights
+
+
+![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Mobile%20Funneal.png)
+
 | **Analysis & Key Findings** | **Root Causes & Technical Focus** | **Action Plan & Targets** |
 |------------------------------|-----------------------------------|----------------------------|
 | **1. Technical Infrastructure Issues**<br>- Android users generate **2× more support tickets** than iOS users.<br>- iOS Chrome users face serious signup issues (**6.06%** success rate). | **Primary Root Causes**<br>- Platform inconsistencies between iOS & Android.<br>- UX issues in project creation flow.<br>- Onboarding process fails to retain users.<br>- Technical debt causing fragmented QA. | **Immediate Actions (0–1 month)**<br>- Fix iOS Chrome compatibility & WebKit form handling.<br>- Strengthen Android QA and error monitoring.<br>- Redesign onboarding to reduce 30s churn from **48% → <20%**. |
 | **2. Churn Distribution**<br>- Technical issues cause **41%** of total churn.<br>- **48%** of users churn during first impression (session start + first page). | **User Experience Gaps**<br>- Complex project creation process.<br>- Poor mobile UI for traditional industries.<br>- Lack of context-based help or in-app guidance. | **Mid-Term Improvements (1–3 months)**<br>- Optimize project/team management for mobile.<br>- Improve touchscreen UX.<br>- Enhance onboarding flow with contextual hints. |
 | **3. Subscription Type Insights**<br>- Premium (Enterprise) plan: **1.41% churn**, indicating high loyalty.<br>- Basic plan churn: **24%** (~$45K annual loss). | **Sector-Based Weaknesses**<br>- Traditional industries (Manufacturing): **33.88% churn**.<br>- Lower digital maturity leads to UX friction. | **Industry-Specific Strategy**<br>- Offer simplified UI
 
-![image](https://github.com/AtilaKzlts/SaaS/blob/main/assets/Mobile%20Funneal.png)
 
 ## ▌ Dashboard Snapshot  
 
